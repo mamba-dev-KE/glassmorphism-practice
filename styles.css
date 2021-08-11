@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+img {
+	max-width: 100%;
+	margin: 0 auto;
+	display: block;
+	border-radius: 100px;
+	margin-top: 2em;
+	border: 4px solid white;
+}
+.name {
+	text-align: center;
+	font-family: "Roboto", sans-serif;
+	font-weight: normal;
+	font-size: 1.2rem;
+	color: black;
+}
+
+.title {
+	text-align: center;
+	font-family: "Roboto", sans-serif;
+	color: #787671;
+	font-weight: 300;
+}
+
+body {
+	background: hsl(232, 100%, 7%); /*Interesting color*/
+	background: radial-gradient(
+		circle,
+		rgba(240, 179, 10, 0.6906906906906907) 10%,
+		rgba(72, 194, 235, 1) 99%
+	);
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	max-width: 1024px;
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+}
+.child {
+	background: rgba(238, 232, 232, 0.5);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	width: 16rem;
+	height: 515px;
+	z-index: 100;
+}
+
+.child + .child {
+	margin-left: 4em;
+}
+
+.social {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	width: 225px;
+	margin: 0 auto;
+}
+.social-item + .social-item {
+	margin-left: 2em;
+}
+.social-item:hover {
+	cursor: pointer;
+}
+.fab,
+.fas {
+	color: cadetblue;
+	font-weight: 900;
+}
+
+img,
+.name,
+.title {
+	margin-bottom: 1em;
+}
+
+.info,
+.info-large {
+	width: 90%;
+	text-align: center;
+	margin: 0 auto;
+	line-height: 1.5;
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	opacity: 0.8;
+}
+.info {
+	margin-top: 1.5em;
+}
+.info-large {
+	margin-top: 1.5em;
+}
+
+.shapes {
+	position: relative;
+}
+
+.circle,
+.circle-2 {
+	width: 300px;
+	height: 300px;
+	border-radius: 200px;
+	position: absolute;
+	background: rgba(238, 232, 232, 0.5);
+	box-shadow: 0 10px 52px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
+}
+
+.circle {
+	bottom: 68%;
+	left: 51.5%;
+	background-color: #f0bf35;
+}
+
+.circle-2 {
+	bottom: 1%;
+	right: 60%;
+	background-color: #e67932;
+}
+
+@media (max-width: 830px) {
+	.container {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.child {
+		margin-top: 1.1em;
+	}
+
+	.child + .child {
+		margin-left: 0;
+	}
+}
